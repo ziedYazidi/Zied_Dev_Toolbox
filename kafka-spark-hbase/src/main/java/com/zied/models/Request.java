@@ -1,4 +1,4 @@
-package models;
+package com.zied.models;
 
 import lombok.Getter;
 import lombok.Setter;

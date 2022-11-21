@@ -1,16 +1,21 @@
-package mappers;
+package com.zied.mappers;
 
-import models.Request;
+import com.zied.models.Request;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.spark.api.java.function.MapFunction;
 import org.apache.spark.sql.Row;
+import scala.Tuple2;
 
-import static constants.Constants.REQUEST_SEPARATOR;
+import static com.zied.constants.Constants.REQUEST_SEPARATOR;
 
-public class RowToRequestMapper implements MapFunction<Row, Request> {
+public class RowToRequestMapper implements MapFunction<Row, Tuple2<String, Request>> {
     private static final long serialVersionUID = 3520689095783306088L;
+    private static Logger LOGGER = LogManager.getLogger(RowToRequestMapper.class);
 
     @Override
-    public Request call(Row row) throws Exception {
+    public Tuple2<String, Request> call(Row row) throws Exception {
+        LOGGER.info("Mapping Row to Request");
         Request request = new Request();
         try {
             String value = row.get(1).toString();
@@ -21,6 +26,6 @@ public class RowToRequestMapper implements MapFunction<Row, Request> {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-        return request;
+        return new Tuple2<>(request.getRequestId(), request);
     }
 }
