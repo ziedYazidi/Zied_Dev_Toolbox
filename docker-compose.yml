@@ -1,7 +1,7 @@
-version: '2.1'
-services:
+#version: '2.1'
+#services:
 
-  # Apache kafka
+# Apache kafka
 #  zookeeper:
 #    image: wurstmeister/zookeeper
 #    container_name: zookeeper
@@ -62,44 +62,44 @@ services:
     #     - "16010:16010"
     #   networks:
     #     - cluster_network
-
-  #Apache Logstash
-  logstash:
-    image: logstash:7.12.0
-    container_name: logstash
-    ports:
-      - "9600:9600"
-    volumes:
-      - /home/zied/Desktop/Work/BigDataProjectScaffolder/ELK/src/main/java/com/zied/pipelines:/var/opt/pipeline
-    networks:
-      - cluster_network
-
-  # Apache Elasticsearch
-  elasticsearch:
-    image: elasticsearch:7.12.0
-    container_name: elasticsearch
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    environment:
-      discovery.type: single-node
-    volumes:
-      - elsaticsearch-db:/var/opt/elasticsearch-db
-    networks:
-      - cluster_network
-
-  # Apache Kibana
-  kibana:
-    image: kibana:7.12.0
-    container_name: kibana
-    ports:
-      - "5601:5601"
-    networks:
-      - cluster_network
-
-volumes:
-  elsaticsearch-db:
-
-networks:
-  cluster_network:
-    name: cluster_network
+#
+#  #Apache Logstash
+#  logstash:
+#    image: logstash:7.12.0
+#    container_name: logstash
+#    ports:
+#      - "9600:9600"
+#    volumes:
+#      - /home/zied/Desktop/Work/BigDataProjectScaffolder/ELK/src/main/java/com/zied/pipelines:/var/opt/pipeline
+#    networks:
+#      - cluster_network
+#
+#  # Apache Elasticsearch
+#  elasticsearch:
+#    image: elasticsearch:7.12.0
+#    container_name: elasticsearch
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+#    environment:
+#      discovery.type: single-node
+#    volumes:
+#      - elsaticsearch-db:/var/opt/elasticsearch-db
+#    networks:
+#      - cluster_network
+#
+#  # Apache Kibana
+#  kibana:
+#    image: kibana:7.12.0
+#    container_name: kibana
+#    ports:
+#      - "5601:5601"
+#    networks:
+#      - cluster_network
+#
+#volumes:
+#  elsaticsearch-db:
+#
+#networks:
+#  cluster_network:
+#    name: cluster_network
