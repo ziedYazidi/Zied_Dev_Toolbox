@@ -11,7 +11,7 @@ import static com.zied.constants.Constants.REQUEST_SEPARATOR;
 
 public class RowToRequestMapper implements MapFunction<Row, Tuple2<String, Request>> {
     private static final long serialVersionUID = 3520689095783306088L;
-    private static Logger LOGGER = LogManager.getLogger(RowToRequestMapper.class);
+    private static final Logger LOGGER = LogManager.getLogger(RowToRequestMapper.class);
 
     @Override
     public Tuple2<String, Request> call(Row row) throws Exception {

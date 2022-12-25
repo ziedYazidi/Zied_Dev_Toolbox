@@ -16,7 +16,7 @@ import scala.Tuple2;
 import java.util.concurrent.TimeoutException;
 
 public class WordCountJob {
-    private static Logger LOGGER = LogManager.getLogger(WordCountJob.class);
+    private static final Logger LOGGER = LogManager.getLogger(WordCountJob.class);
 
     public static void main(String[] args) {
 

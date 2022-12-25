@@ -10,7 +10,7 @@ import java.util.Iterator;
 
 public class CountMapGroupsFunction implements MapGroupsFunction<String, Tuple2<String, Request>, Tuple2<String, Integer>> {
     private static final long serialVersionUID = 3063137958539664959L;
-    private static Logger LOGGER = LogManager.getLogger(CountMapGroupsFunction.class);
+    private static final Logger LOGGER = LogManager.getLogger(CountMapGroupsFunction.class);
 
     @Override
     public Tuple2<String, Integer> call(String s, Iterator<Tuple2<String, Request>> iterator) throws Exception {

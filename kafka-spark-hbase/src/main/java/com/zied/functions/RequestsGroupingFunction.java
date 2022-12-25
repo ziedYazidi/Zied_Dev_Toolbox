@@ -8,7 +8,7 @@ import scala.Tuple2;
 
 public class RequestsGroupingFunction implements MapFunction<Tuple2<String, Request>, String> {
     private static final long serialVersionUID = 5183574971535824145L;
-    private static Logger LOGGER = LogManager.getLogger(RequestsGroupingFunction.class);
+    private static final Logger LOGGER = LogManager.getLogger(RequestsGroupingFunction.class);
 
     @Override
     public String call(Tuple2<String, Request> stringRequestTuple2){

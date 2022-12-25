@@ -29,7 +29,6 @@ class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Training API")
                 .description("Training API reference for developers")
-                .contact("training@gmail.com").license("Training License")
                 .licenseUrl("training@gmail.com").version("1.0").build();
     }
 }
