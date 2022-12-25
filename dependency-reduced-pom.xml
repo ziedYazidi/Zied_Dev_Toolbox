@@ -31,7 +31,7 @@
   <modules>
     <module>ELK</module>
     <module>kafka-spark-hbase</module>
-    <module>spring-mvc</module>
+    <module>spring-mvc-swagger</module>
   </modules>
   <dependencies>
     <dependency>
