@@ -11,7 +11,7 @@ pipeline {
                 echo 'Run the security check against the application'
             }
         }
-        stage('Run Unit Tests') {
+        stage('Unit Tests') {
             steps {
                 echo 'Run unit tests from the source code'
             }
