@@ -22,46 +22,46 @@
 #      - /var/run/docker.sock:/var/run/docker.sock
 #    networks:
 #      - cluster_network
-    # # Apache Spark
-    #   master:
-    #     image: singularities/spark
-    #     container_name: spark-master
-    #     command: start-spark master
-    #     hostname: master
-    #     ports:
-    #       - "6066:6066"
-    #       - "7070:7070"
-    #       - "8080:8080"
-    #       - "50070:50070"
-    #     networks:
-    #       - cluster_network
+# # Apache Spark
+#   master:
+#     image: singularities/spark
+#     container_name: spark-master
+#     command: start-spark master
+#     hostname: master
+#     ports:
+#       - "6066:6066"
+#       - "7070:7070"
+#       - "8080:8080"
+#       - "50070:50070"
+#     networks:
+#       - cluster_network
 
-    #   worker:
-    #     image: singularities/spark
-    #     container_name: spark-worker
-    #     command: start-spark worker master
-    #     environment:
-    #       SPARK_WORKER_CORES: 1
-    #       SPARK_WORKER_MEMORY: 2g
-    #     links:
-    #       - master
-    #     networks:
-    #       - cluster_network
+#   worker:
+#     image: singularities/spark
+#     container_name: spark-worker
+#     command: start-spark worker master
+#     environment:
+#       SPARK_WORKER_CORES: 1
+#       SPARK_WORKER_MEMORY: 2g
+#     links:
+#       - master
+#     networks:
+#       - cluster_network
 
-    # Apache Hbase
-    #  hbase:
-    #   image: ziedyazidi/hbase
-    #   container_name: hbase
-    #   hostname: hbase-docker
-    #   ports:
-    #     - "8081:8080"
-    #     - "2182:2182"
-    #     - "8085:8085"
-    #     - "9090:9090"
-    #     - "9095:9095"
-    #     - "16010:16010"
-    #   networks:
-    #     - cluster_network
+# Apache Hbase
+#  hbase:
+#   image: ziedyazidi/hbase
+#   container_name: hbase
+#   hostname: hbase-docker
+#   ports:
+#     - "8081:8080"
+#     - "2182:2182"
+#     - "8085:8085"
+#     - "9090:9090"
+#     - "9095:9095"
+#     - "16010:16010"
+#   networks:
+#     - cluster_network
 #
 #  #Apache Logstash
 #  logstash:
@@ -103,3 +103,8 @@
 #networks:
 #  cluster_network:
 #    name: cluster_network
+
+
+
+# docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+# ngrok http 8080
