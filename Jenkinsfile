@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run Integration Tests') {
             steps {
-                echo 'Run only crucial integration tests from the source code'
+                echo 'Run integration tests'
             }
         }
         stage('Publish Artifacts') {
