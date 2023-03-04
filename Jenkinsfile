@@ -1,14 +1,19 @@
 pipeline {
     agent any
+      tools {
+            // Install the Maven version configured as "M3" and add it to the path.
+            maven "M3"
+        }
     stages {
         stage('Compile') {
             steps {
-                echo 'Compile the source code'
+                // Run Maven on a Unix agent.
+                sh "mvn -DSkipTests clean package"
             }
         }
         stage('Run Unit Tests') {
             steps {
-                echo 'Hello world Test' 
+                sh "mvn test"
             }
         }
         stage('Run Integration Tests') {
