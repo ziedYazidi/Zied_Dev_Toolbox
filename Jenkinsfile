@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run Unit Tests') {
             steps {
-                echo 'Run unit tests from the source code'
+                echo 'Hello world Test' 
             }
         }
         stage('Run Integration Tests') {
