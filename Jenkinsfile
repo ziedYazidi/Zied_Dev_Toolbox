@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        // Install the Maven version configured as "apache-maven-3.0.1" and add it to the path., this need to be setup in the Manage Jenkins → Global Tool Configuration.
+        // Install the Maven version configured as "apache-maven-3.0.1" and add it to the path., this need to be setup in the Manage Jenkins → Global Tool Configuration
         maven 'maven-3.23'
     }
     stages {
