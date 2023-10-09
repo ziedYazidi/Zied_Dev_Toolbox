@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // Run Maven on a Unix agent.
 //                sh "mvn -DSkipTests clean package"
-                echo 'Compile  the source code'
+                echo 'Compile the source code'
             }
         }
         stage('Run Unit Tests') {
