@@ -1,6 +1,4 @@
 # BigDataProjectScaffolder
-# Webhook TEST
-
 
 
 Useful commands:
