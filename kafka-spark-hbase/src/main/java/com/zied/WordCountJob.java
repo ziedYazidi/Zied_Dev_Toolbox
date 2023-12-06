@@ -31,7 +31,7 @@ public class WordCountJob {
             Dataset<Row> data = spark
                     .readStream()
                     .format("kafka")
-                    .option("kafka.bootstrap.servers", "172.20.0.2:9092")
+                    .option("kafka.bootstrap.servers", "kafka:9092")
                     .option("subscribe", "requests_topic")
                     .option("startingOffsets", "earliest")
                     .load()
