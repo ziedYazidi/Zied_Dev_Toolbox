@@ -34,6 +34,7 @@ public class WordCountJob {
                     .option("kafka.bootstrap.servers", "kafka:9092")
                     .option("subscribe", "requests_topic")
                     .option("startingOffsets", "earliest")
+                    .option("failOnDataLoss", "false")
                     .load()
                     .selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)");
 

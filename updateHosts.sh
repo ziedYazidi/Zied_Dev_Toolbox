@@ -61,5 +61,23 @@ else
   sudo sh -c "echo '\n$zookeeper_docker_ip $zookeeper_docker_hostname' >> /etc/hosts"
 fi
 
+# Get the elasticsearch hostname and IP inside the container && update /etc/hosts
+echo ""
+echo "-----------------elasticsearch-----------------"
+id_elasticsearch=$(docker container ls | grep elasticsearch | cut -d " " -f 1)
+docker inspect $id_elasticsearch > config.json
+elasticsearch_docker_hostname=$(python3 -c 'from __future__ import print_function; import json; c=json.load(open("config.json")); name = c[0]["Name"]; print(name[1:])')
+elasticsearch_docker_ip=$(python3 -c 'from __future__ import print_function; import json; c=json.load(open("config.json")); print(c[0]["NetworkSettings"]["Networks"]["cluster_network"]["IPAddress"])')
+echo $elasticsearch_docker_hostname
+echo $elasticsearch_docker_ip
+
+rm -f config.json
+
+echo "Updating /etc/hosts to make $$elasticsearch_docker_hostname point to $elasticsearch_docker_ip ($elasticsearch_docker_hostname)"
+if grep 'hbase-docker' /etc/hosts >/dev/null; then
+  sudo sed -i.bak "s/^.*hbase-docker.*\$/$elasticsearch_docker_ip $elasticsearch_docker_hostname/" /etc/hosts
+else
+  sudo sh -c "echo '\n$elasticsearch_docker_ip $elasticsearch_docker_hostname' >> /etc/hosts"
+fi
 
 echo "connection to host hbase-docker (in the container) enabled"
