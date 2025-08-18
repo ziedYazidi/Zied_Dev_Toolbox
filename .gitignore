@@ -1,5 +1,12 @@
-/.idea/
-/target/
-/spring-mvc-swagger/target/
-/kafka-spark-hbase/target/
-/ELK/target/
+# Maven
+target/
+**/target/
+dependency-reduced-pom.xml
+**/dependency-reduced-pom.xml
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
