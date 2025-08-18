@@ -13,13 +13,14 @@
         <module>kafka-spark-hbase</module>
         <module>spring-mvc-swagger</module>
         <module>grpc-proto</module>
+        <module>spring-kafka-poc</module>
+        <module>java-core</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.target>11</maven.compiler.target>
-        <lombok.version>1.18.20</lombok.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <lombok.version>1.18.30</lombok.version>
         <spark.version>3.1.2</spark.version>
     </properties>
 
