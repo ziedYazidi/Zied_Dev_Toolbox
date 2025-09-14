@@ -1,6 +1,5 @@
-import scala.Int;
+package com.dawden;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Java17LTS {
@@ -42,6 +41,15 @@ public class Java17LTS {
             }
         }
     }
+
+    public static int switchExpressionPOC(String day) {
+        return switch (day) {
+            case "Monday" -> 1;
+            case "Tuesday" -> 2;
+            default -> 0;
+        };
+    }
+
     record User(int id, String  name) {
         public User {
 //            Custom validation

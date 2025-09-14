@@ -1,3 +1,5 @@
+package com.dawden;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
@@ -16,7 +18,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@Slf4j
 public class Java11LTS {
 
     private static final Logger log = LoggerFactory.getLogger(Java11LTS.class);
