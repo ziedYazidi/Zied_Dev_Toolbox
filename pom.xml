@@ -15,6 +15,7 @@
         <module>grpc-proto</module>
         <module>spring-kafka-poc</module>
         <module>java-core</module>
+        <module>spring-camel-poc</module>
     </modules>
 
     <properties>
