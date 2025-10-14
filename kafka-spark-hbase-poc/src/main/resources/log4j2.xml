@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="ConsoleLogger" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <Kafka name="KafkaLogger" topic="log-test">
+            <PatternLayout pattern="%date %message"/>
+            <Property name="bootstrap.servers">localhost:9092</Property>
+        </Kafka>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.zied" level="info" additivity="false">
+            <AppenderRef ref="ConsoleLogger"/>
+            <AppenderRef ref="KafkaLogger"/>
+        </Logger>
+        <Logger name="log4j.logger.org.apache.kafka.clients.consumer.internals.SubscriptionState" level="ERROR" additivity="false">
+            <AppenderRef ref="ConsoleLogger"/>
+        </Logger>
+    </Loggers>
+</Configuration>
