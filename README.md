@@ -1,4 +1,4 @@
-**Zied_Dev_Toolbox is a personal repository used to explore new tools, experiment with integrations, and develop small proof-of-concepts (PoCs). It serves as a space for learning, testing ideas, and refining approaches before applying them to larger projects.**
+**Zied_Dev_Toolbox** is a personal repository used to explore new tools, experiment with integrations, and develop small proof-of-concepts (PoCs). It serves as a space for learning, testing ideas, and refining approaches before applying them to larger projects.
 
 Useful commands:
 
