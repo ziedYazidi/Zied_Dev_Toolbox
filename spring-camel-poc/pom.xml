@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zied</groupId>
-        <artifactId>BigDataProjectScaffolder</artifactId>
+        <artifactId>Zied_Dev_Toolbox</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -75,7 +75,21 @@
             <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-cli-connector-starter</artifactId>
         </dependency>
+        <!-- JAXB API (annotations, enums like XmlAccessType) -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <!-- JAXB runtime (implementation for marshalling/unmarshalling) -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>3.0.2</version>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -83,13 +97,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot-version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

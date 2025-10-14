@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zied</groupId>
-        <artifactId>BigDataProjectScaffolder</artifactId>
+        <artifactId>Zied_Dev_Toolbox</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -37,9 +37,9 @@
                 <version>3.11.0</version>
                 <configuration>
                     <fork>true</fork>
-                    <annotationProcessors>
-                        <annotationProcessor>com.dawden.custom.annotation.PositiveAnnotationProcessor</annotationProcessor>
-                    </annotationProcessors>
+<!--                    <annotationProcessors>-->
+<!--                        <annotationProcessor>com.dawden.custom.annotation.PositiveAnnotationProcessor</annotationProcessor>-->
+<!--                    </annotationProcessors>-->
                     <source>21</source>
                     <target>21</target>
                     <compilerArgs>--enable-preview</compilerArgs>
